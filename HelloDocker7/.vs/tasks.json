@@ -1,0 +1,19 @@
+{
+    "label": "publish:catalog-api",
+    "command": "dotnet",
+    "type": "process",
+    "args": [
+        "publish",
+        "${workspaceFolder}/src/services/catalog/Host/Host.csproj",
+        "--os",
+        "linux",
+        "--arch",
+        "x64",
+        "-c",
+        "Release",
+        "-p:PublishProfile=DefaultContainer",
+        "-p:ContainerImageTags=latest",
+        "--self-contained"
+    ],
+    "problemMatcher": "$msCompile"
+}
